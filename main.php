@@ -1,11 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Página Principal</title>
+  <style>
+    #loader {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+    .spinner {
+      border: 8px solid #ddd;
+      border-top: 8px solid #5995fd;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      animation: spin 1s linear infinite;
+    }
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+    #contenido {
+      display: none;
+    }
+  </style>
 </head>
 <body>
-  <H1>HOLA</H1>
+  <div id="loader">
+    <div class="spinner"></div>
+  </div>
+
+  <div id="contenido">
+    <h1>Bienvenido a tu panel</h1>
+    <!-- más contenido -->
+  </div>
+
+  <script>
+    // Esperar 2 segundos antes de mostrar contenido (simula carga)
+    setTimeout(() => {
+      document.getElementById('loader').style.display = 'none';
+      document.getElementById('contenido').style.display = 'block';
+    }, 2000);
+  </script>
 </body>
 </html>
