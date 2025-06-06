@@ -14,6 +14,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   signin.addEventListener('click', (event) => {
     event.preventDefault(); // Evita que el formulario se envíe
-    window.location.assign("loading.html");
+    window.location.assign("modulos/loading.html");
   });
 });
