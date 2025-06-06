@@ -412,3 +412,35 @@ form.sign-in-form {
   background-color: white;
   color: #4481eb;
 }
+
+
+/*********************** ESTILOS LOADING BANNER***********************************/
+#loader {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.spinner {
+  border: 8px solid #ddd;
+  border-top: 8px solid #5995fd;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+#contenido {
+  display: none;
+}
