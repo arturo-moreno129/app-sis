@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
       .then(response => response.json())
       .then(data => {
         if (data.status === 'error') {
-          console.error(data.message);
+          //console.error(data.message);
           Swal.fire({
             title: "Usuario incorrecto pruebe de nuevo",
             showClass: {
@@ -54,14 +54,14 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         // Si el inicio de sesión fue exitoso
-        console.log(data.message);
+        //console.log(data.message);
         //alert(`✅ ${data.message}`);
 
         // Redireccionar, por ejemplo, a dashboard.html
         window.location.href = 'modulos/loading.html';
       })
       .catch(error => {
-        console.error('Error al procesar la solicitud:', error);
+        //console.error('Error al procesar la solicitud:', error);
         //alert('❌ Error de red o del servidor');
       });
   });
