@@ -62,11 +62,11 @@ document.addEventListener('DOMContentLoaded', () => {
       })
       .catch(error => {
         console.error('Error al procesar la solicitud:', error);
-        alert('❌ Error de red o del servidor');
+        //alert('❌ Error de red o del servidor');
       });
   });
   /***************************PARA REGISTRAR USUARIO**************************** */
-  singup.addEventListener('click', (event) => {
+  /*singup.addEventListener('click', (event) => {
     event.preventDefault(); // Evita que el formulario se envíe
 
     const user = document.getElementById('user').value;
@@ -96,9 +96,9 @@ document.addEventListener('DOMContentLoaded', () => {
       })
       .catch(error => {
         console.error('Error al procesar la solicitud:', error);
-        alert('❌ Error de red o del servidor');
+        //alert('❌ Error de red o del servidor');
       });
-  });
+  });*/
 
 
 });
