@@ -34,6 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
           //console.error(data.message);
           Swal.fire({
             title: "Usuario incorrecto pruebe de nuevo",
+            confirmButtonColor: "#3085d6",//color del boton
             showClass: {
               popup: `
                     animate__animated
