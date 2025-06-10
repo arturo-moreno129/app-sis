@@ -1,6 +1,12 @@
 <?php
 include('config.php'); // Incluye la conexión a la base de datos
 
+ini_set('display_errors', 0); // No mostrar errores al cliente
+ini_set('log_errors', 1);     // Registrar los errores
+error_reporting(E_ALL);
+
+
+
 if (isset($_POST['action'])) {
     $action = $_POST['action'];
     switch ($action) {
@@ -11,15 +17,19 @@ if (isset($_POST['action'])) {
                 $response = ["status" => "error", "message" => "Faltan datos"];
             }
             break;
-        case 'register':
-            if (isset($_POST['user']) && isset($_POST['contrasena'])) {
-                $response = registrarUsuario($_POST['user'], $_POST['contrasena']);
-            } else {
-                $response = ["status" => "error", "message" => "Faltan datos"];
-            }
+        case 'logout':
+            session_start();
+            $_SESSION = []; // Vacía la sesión
+            session_destroy();
+            session_regenerate_id(true); // Opcional para mayor seguridad
+
+            // Envía la respuesta al cliente
+            echo json_encode([
+                "status" => "success", // Cambia a success si es un cierre exitoso
+                "message" => "Sesión cerrada correctamente"
+            ]);
+            exit();
             break;
-
-
         default:
             $response = ["status" => "error", "message" => "Ningún método encontrado"];
             break;

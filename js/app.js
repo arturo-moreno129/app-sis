@@ -2,70 +2,79 @@ document.addEventListener('DOMContentLoaded', () => {
   const sign_in_btn = document.querySelector("#sign-in-btn");
   const sign_up_btn = document.querySelector("#sign-up-btn");
   const container = document.querySelector(".container");
-  const signin = document.getElementById('signin');
-  const singup = document.getElementById('singup')
-
-  sign_up_btn.addEventListener("click", () => {
-    container.classList.add("sign-up-mode");
-  });
-
-  sign_in_btn.addEventListener("click", () => {
-    container.classList.remove("sign-up-mode");
-  });
+  const signin = document.getElementById('signin');//inicio de sesion
+  const singup = document.getElementById('singup');//registrar nuevo usuario
+  const logout = document.getElementById("logout"); // salida del usuario
 
 
+  if (sign_up_btn) {
+    sign_up_btn.addEventListener("click", () => {
+      container.classList.add("sign-up-mode");
+    });
+  }
 
-  signin.addEventListener('click', (event) => {
-    event.preventDefault(); // Evita que el formulario se envíe
 
-    const user = document.getElementById('user').value;
-    const pass = document.getElementById('pass').value;
+  if (sign_in_btn) {
+    sign_in_btn.addEventListener("click", () => {
+      container.classList.remove("sign-up-mode");
+    });
+  }
 
-    fetch('crud.php', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/x-www-form-urlencoded'
-      },
-      body: `action=login&user=${encodeURIComponent(user)}&contrasena=${encodeURIComponent(pass)}`
-    })
-      .then(response => response.json())
-      .then(data => {
-        if (data.status === 'error') {
-          //console.error(data.message);
-          Swal.fire({
-            title: "Usuario incorrecto pruebe de nuevo",
-            confirmButtonColor: "#3085d6",//color del boton
-            showClass: {
-              popup: `
+  if (signin) {
+    signin.addEventListener('click', (event) => {
+      event.preventDefault(); // Evita que el formulario se envíe
+
+      const user = document.getElementById('user').value;
+      const pass = document.getElementById('pass').value;
+
+      fetch('crud.php', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded'
+        },
+        body: `action=login&user=${encodeURIComponent(user)}&contrasena=${encodeURIComponent(pass)}`
+      })
+        .then(response => response.json())
+        .then(data => {
+          if (data.status === 'error') {
+            //console.error(data.message);
+            Swal.fire({
+              title: "Usuario incorrecto pruebe de nuevo",
+              confirmButtonColor: "#3085d6",//color del boton
+              showClass: {
+                popup: `
                     animate__animated
                     animate__fadeInUp
                     animate__faster
                                     `
-            },
-            hideClass: {
-              popup: `
+              },
+              hideClass: {
+                popup: `
                     animate__animated
                     animate__fadeOutDown
                     animate__faster
                                    `
-            }
-          });
-          //alert(`❌ Error: ${data.message}`);
-          return;
-        }
+              }
+            });
+            //alert(`❌ Error: ${data.message}`);
+            return;
+          }
 
-        // Si el inicio de sesión fue exitoso
-        //console.log(data.message);
-        //alert(`✅ ${data.message}`);
+          // Si el inicio de sesión fue exitoso
+          //console.log(data.message);
+          //alert(`✅ ${data.message}`);
 
-        // Redireccionar, por ejemplo, a dashboard.html
-        window.location.href = 'modulos/loading.html';
-      })
-      .catch(error => {
-        //console.error('Error al procesar la solicitud:', error);
-        //alert('❌ Error de red o del servidor');
-      });
-  });
+          // Redireccionar, por ejemplo, a dashboard.html
+          window.location.href = 'modulos/loading.html';
+        })
+        .catch(error => {
+          //console.error('Error al procesar la solicitud:', error);
+          //alert('❌ Error de red o del servidor');
+        });
+    });
+  }
+
+
   /***************************PARA REGISTRAR USUARIO**************************** */
   /*singup.addEventListener('click', (event) => {
     event.preventDefault(); // Evita que el formulario se envíe
@@ -100,6 +109,26 @@ document.addEventListener('DOMContentLoaded', () => {
         //alert('❌ Error de red o del servidor');
       });
   });*/
+
+  if (logout) {
+    logout.addEventListener('click', () => {
+      fetch('../crud.php', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded'
+        },
+        body: 'action=logout'
+      })
+        .then(response => response.json())
+        .then(data => {
+          //alert(data.message); // Mostrar mensaje
+          if (data.status === "success") {
+            window.location.href = "../index.php"; // Redirigir al login
+          }
+        })
+        .catch(error => console.error('Error:', error));
+    });
+  }
 
 
 });
