@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
           //alert(`✅ ${data.message}`);
 
           // Redireccionar, por ejemplo, a dashboard.html
-          window.location.href = 'modulos/loading.html';
+          window.location.href = 'modulos/loading.php';
         })
         .catch(error => {
           //console.error('Error al procesar la solicitud:', error);

@@ -3,7 +3,7 @@ session_start();
 
 if (isset($_SESSION['nombre'])) {
   // Ya está logueado, redirigir al dashboard
-  header('Location: modulos/loading.html');
+  header('Location: modulos/loading.php');
   exit();
 }
 ?>
