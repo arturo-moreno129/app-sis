@@ -15,7 +15,7 @@ if (isset($_SESSION['nombre'])) {
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/258c34b44b.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="css/style.css" />
   <link rel="shortcut icon" href="img/icon.png" type="image/x-icon">
   <!---para animaciones y uso de sweetalert-->
