@@ -53,7 +53,7 @@ function login($user, $pass)
 
         if ($stmt->rowCount() == 1) {
             $usuario = $stmt->fetch(PDO::FETCH_ASSOC);
-            if (password_verify($pass, $usuario['contasena'])) {
+            if (password_verify($pass, $usuario['contrasena'])) {
                 // Guardar en sesión
                 $_SESSION['id'] = $usuario['id_user'];
                 $_SESSION['nombre'] = $usuario['usuario'];
