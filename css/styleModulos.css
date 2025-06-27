@@ -25,6 +25,9 @@ body {
     position: relative;
     width: 100%;
 }
+.icon{
+    font-size: 25px;
+}
 
 .navigation {
     position: fixed;

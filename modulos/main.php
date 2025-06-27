@@ -1,11 +1,11 @@
 <?php
-/*session_start();
+session_start();
 
 if (!isset($_SESSION['nombre'])) {
     // Si no hay sesión, redirigir al login
     header('Location: ../index.php');
     exit();
-}*/
+}
 ?>
 <!-- Contenido visible solo para usuarios autenticados -->
 <!DOCTYPE html>
@@ -47,10 +47,10 @@ if (!isset($_SESSION['nombre'])) {
                         <span class="title">Tickets</span>
                     </a>
                 </li>
-                <li>
+                <li id="logout">
                     <a href="#">
-                        <span class="icon"><ion-icon name="ticket-outline"></ion-icon></span>
-                        <span class="title">Help</span>
+                        <span class="icon"><ion-icon name="log-out-outline"></ion-icon></span>
+                        <span class="title">Cerrar Sesion</span>
                     </a>
                 </li>
             </ul>
@@ -59,6 +59,7 @@ if (!isset($_SESSION['nombre'])) {
     <footer>
         <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+        <script src="../js/app.js"></script>
     </footer>
 </body>
 

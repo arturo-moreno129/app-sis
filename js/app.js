@@ -123,7 +123,7 @@ document.addEventListener('DOMContentLoaded', () => {
         .then(data => {
           //alert(data.message); // Mostrar mensaje
           if (data.status === "success") {
-            window.location.href = "../index.php"; // Redirigir al login
+            window.location.href = "../index"; // Redirigir al login
           }
         })
         .catch(error => console.error('Error:', error));

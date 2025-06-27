@@ -34,11 +34,11 @@ if (isset($_SESSION['nombre'])) {
           <h2 class="title">iniciar sesión</h2>
           <div class="input-field">
             <i class="fas fa-user"></i>
-            <input type="text" placeholder="Usuario" autocomplete="current-password" id="user">
+            <input type="text" name="usuario" placeholder="Usuario" autocomplete="username" id="user">
           </div>
           <div class="input-field">
             <i class="fas fa-lock"></i>
-            <input type="password" placeholder="Contraseña" autocomplete="current-password" id="pass">
+            <input type="password" name="password" placeholder="Contraseña" autocomplete="current-password" id="pass">
           </div>
           <input type="submit" value="iniciar sesión" class="btn solid" id="signin" />
           <!--<p class="social-text">Or Sign in with social platforms</p>
