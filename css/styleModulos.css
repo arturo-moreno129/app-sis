@@ -110,7 +110,12 @@ body {
     box-shadow: 35px -35px 0 10px var(--white);
     pointer-events: none;
 }
-
-
+/*************************************MAIN*****************************************/
+main {
+    margin-left: 300px;
+    padding: 20px;
+    transition: margin-left 0.5s ease;
+    background:var(--white);
+}
 
 

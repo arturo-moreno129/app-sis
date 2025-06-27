@@ -128,7 +128,6 @@ if (isset($_SESSION['nombre'])) {
       </div>
     </div>
   </div>
-
   <script src="js/app.js"></script>
 </body>
 
