@@ -36,23 +36,24 @@ if (!isset($_SESSION['nombre'])) {
                     </a>
                 </li>
                 <li>
-                    <a href="#">
-                        <span class="icon"><ion-icon name="person-outline"></ion-icon></span>
-                        <span class="title">Usuarios</span>
+                    <a href="../modulos/viaticos">
+                        <span class="icon"><ion-icon name="airplane-outline"></ion-icon></span>
+                        <span class="title">Viaticos</span>
                     </a>
                 </li>
                 <li>
-                    <a href="#">
-                        <span class="icon"><ion-icon name="ticket-outline"></ion-icon></span>
-                        <span class="title">Tickets</span>
+                    <a href="../modulos/permisos">
+                        <span class="icon"><ion-icon name="reader-outline"></ion-icon></span>
+                        <span class="title">Permisos</span>
                     </a>
                 </li>
-                <li id="logout">
-                    <a href="#">
+                <li id="logout" class="no-hover-effect">
+                    <a href="../logout.php">
                         <span class="icon"><ion-icon name="log-out-outline"></ion-icon></span>
-                        <span class="title">Cerrar Sesion</span>
+                        <span class="title">Cerrar Sesión</span>
                     </a>
                 </li>
+
             </ul>
         </div>
     </div>

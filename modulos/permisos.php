@@ -2,7 +2,7 @@
 include '../layouts/header.php'
 ?>
 <div>
-    <h1>hola mundo</h1>
+    <h1>permisos</h1>
 </div>
 <?php
 include '../layouts/footer.php'
