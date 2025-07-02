@@ -17,7 +17,7 @@
       document.getElementById('loader').style.display = 'none';
       //document.getElementById('contenido').style.display = 'block';
       console.log("hola")
-      window.location.assign("main.php");
+      window.location.assign("main");
     }, 2000);
   </script>
 </body>

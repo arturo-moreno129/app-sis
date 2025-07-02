@@ -48,7 +48,7 @@ if (!isset($_SESSION['nombre'])) {
                     </a>
                 </li>
                 <li id="logout" class="no-hover-effect">
-                    <a href="../logout.php">
+                    <a href="">
                         <span class="icon"><ion-icon name="log-out-outline"></ion-icon></span>
                         <span class="title">Cerrar Sesión</span>
                     </a>
