@@ -1,6 +1,9 @@
 <?php
 include '../layouts/header.php'
 ?>
+<div class="prueba">
+    <h1>Hola</h1>
+</div>
 <!--<div class="container">
     <div class="card">
         <img src="https://i.pravatar.cc/50?img=1" alt="Avatar">

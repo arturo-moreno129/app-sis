@@ -72,9 +72,3 @@ if (!isset($_SESSION['nombre'])) {
                     <img src="../img/avatar_h.webp" alt="">
                 </div>
             </div>
-            <div class="prueba">
-                <h1>Hola</h1>
-            </div>
-        </div>
-
-    </div>
