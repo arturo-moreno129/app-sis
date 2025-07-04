@@ -131,7 +131,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   const toggle = document.querySelector('.toggle')
   const navigation = document.querySelector('.navigation')
-  const main = document.querySelector('.main');
+  const main = document.querySelector('.main')
 
   if (toggle) {
     toggle.addEventListener('click', () => {

@@ -29,7 +29,9 @@ body {
 .icon {
     font-size: 25px;
 }
-
+.navigation{
+    overflow-y: auto;
+}
 .navigation {
     position: fixed;
     width: 300px;
@@ -45,6 +47,9 @@ body {
     top: 0;
     left: 0;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .navigation ul li {
@@ -122,11 +127,10 @@ body {
 }
 
 #logout {
-    margin-top: 350px;
+    margin-top: auto;
 }
 
 #logout:hover a {
-    width: 200px;
     border-radius: 50px;
 }
 
@@ -219,6 +223,7 @@ main {
     width: calc(100% - 100px);
     left: 80px;
 }
+
 
 
 /***************************Media queri para responsive diseño*******************************************/
