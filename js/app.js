@@ -129,6 +129,16 @@ document.addEventListener('DOMContentLoaded', () => {
         .catch(error => console.error('Error:', error));
     });
   }
+  const toggle = document.querySelector('.toggle')
+  const navigation = document.querySelector('.navigation')
+  const main = document.querySelector('.main');
 
+  if (toggle) {
+    toggle.addEventListener('click', () => {
+      console.log('entro');
+      navigation.classList.toggle('active');
+      main.classList.toggle('menu-bar');
+    })
+  }
 
 });

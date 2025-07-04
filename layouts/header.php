@@ -53,8 +53,25 @@ if (!isset($_SESSION['nombre'])) {
                         <span class="title">Cerrar Sesión</span>
                     </a>
                 </li>
-
             </ul>
+        </div>
+        <!------- cabecera------->
+        <div class="main">
+            <div class="topbar">
+                <div class="toggle">
+                    <ion-icon name="menu-outline"></ion-icon>
+                </div>
+                <div class="search">
+                    <label for="">
+                        <input type="text" placeholder="Buscar">
+                        <ion-icon name="search-outline"></ion-icon>
+                    </label>
+                </div>
+                <!---perfil usuario-->
+                <div class="user">
+                    <img src="../img/avatar_h.webp" alt="">
+                </div>
+            </div>
         </div>
     </div>
     <main>
