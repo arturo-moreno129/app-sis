@@ -138,9 +138,9 @@ body {
 /*************************************MAIN*****************************************/
 
 
-.user img {
+/*.user img {
     width: 50px;
-}
+}*/
 
 .main {
     position: absolute;
@@ -201,7 +201,7 @@ body {
     font-size: 1.2em;
 }
 
-.user {
+/*.user {
     position: relative;
     min-width: 50px;
     height: auto;
@@ -209,7 +209,7 @@ body {
     overflow: hidden;
     cursor: pointer;
     background-color: black;
-}
+}*/
 
 .navigation.active {
     width: 80px;
@@ -226,6 +226,48 @@ body {
     background-color: red;
     z-index: 1000;
 }
+ /* Estilos para el dropdown */
+                .user-dropdown {
+                    position: relative;
+                    display: inline-block;
+                }
+
+                .user-dropdown img {
+                    cursor: pointer;
+                    width: 50px;
+                    height: auto;
+                    background-color: black;
+                    border-radius: 50%;
+                }
+
+                .dropdown-content {
+                    display: none;
+                    position: absolute;
+                    right: 0;
+                    background-color: white;
+                    min-width: 160px;
+                    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+                    z-index: 1;
+                    border-radius: 8px;
+                    overflow: hidden;
+                }
+
+                .dropdown-content a {
+                    color: black;
+                    padding: 12px 16px;
+                    text-decoration: none;
+                    display: block;
+                    border-radius: 8px;
+                }
+
+                .dropdown-content a:hover {
+                    background-color: gray;
+                    
+                }
+
+                .user-dropdown:hover .dropdown-content {
+                    display: block;
+                }
 
 
 /***************************Media queri para responsive diseño*******************************************/
