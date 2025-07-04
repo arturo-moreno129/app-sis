@@ -233,45 +233,69 @@ body {
 /* Estilos para el dropdown */
 .user-dropdown {
     position: relative;
-    display: inline-block;
+    display: flex;
+    /* CAMBIO: antes inline-block */
+    align-items: center;
+    gap: 10px;
+    /* espacio entre imagen y texto */
+    cursor: pointer;
 }
 
 .user-dropdown img {
-    cursor: pointer;
-    width: 50px;
-    height: auto;
+    width: 40px;
+    height: 40px;
     background-color: black;
     border-radius: 50%;
+    object-fit: cover;
 }
 
+.username {
+    font-size: 20px;
+    color: white;
+    white-space: nowrap;
+    background-color: var(--blue);
+    padding: 10px;
+    border-radius: 20px;
+}
+
+
+.user-dropdown {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.user-dropdown img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
 .dropdown-content {
     display: none;
     position: absolute;
+    min-width: 200px;
+    margin-top: 10px;
+    top: 100%;
     right: 0;
-    background-color: white;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-    border-radius: 8px;
-    overflow: hidden;
-}
-
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    border-radius: 8px;
-}
-
-.dropdown-content a:hover {
-    background-color: var(--blue);
+    background-color: #007bff;
     color: white;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    z-index: 999;
 }
 
-.user-dropdown:hover .dropdown-content {
+.dropdown-content.show {
     display: block;
 }
+
+/*.user-dropdown .dropdown-content {
+    display: block;
+}*/
+
 /********* PARA DROPDONLIS*****************/
 #a {
     display: flex;

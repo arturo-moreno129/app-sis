@@ -69,7 +69,7 @@ if (!isset($_SESSION['nombre'])) {
                 </div>
                 <!---perfil usuario-->
                 <div class="user-dropdown">
-
+                    <span class="username">José Arturo Moreno Aguilar</span>
                     <img src="../img/avatar_h.webp" alt="">
                     <div class="dropdown-content">
                         <a href="" id="a">
@@ -78,6 +78,7 @@ if (!isset($_SESSION['nombre'])) {
                         </a>
                     </div>
                 </div>
+
             </div>
 
             <style>

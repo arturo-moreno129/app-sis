@@ -158,5 +158,18 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  const userDropdown = document.querySelector('.user-dropdown');
+  const dropdownContent = document.querySelector('.dropdown-content');
+
+  if (userDropdown && dropdownContent) {
+    userDropdown.addEventListener('click', (e) => {
+      e.stopPropagation();
+      dropdownContent.classList.toggle('show');
+    });
+  }
+
+  document.addEventListener('click', () => {
+    dropdownContent.classList.remove('show');
+  });
 
 });
