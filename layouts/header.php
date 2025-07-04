@@ -68,12 +68,18 @@ if (!isset($_SESSION['nombre'])) {
                     </label>
                 </div>
                 <!---perfil usuario-->
-
                 <div class="user-dropdown">
+
                     <img src="../img/avatar_h.webp" alt="">
                     <div class="dropdown-content">
-                        <a href="#">Perfil</a>
-                        <a href="#" id="logout">Cerrar sesión</a>
+                        <a href="" id="a">
+                            <span class="icon2"><ion-icon name="person-outline"></ion-icon></span>
+                            <span class="title2">Perfil</span>
+                        </a>
                     </div>
                 </div>
             </div>
+
+            <style>
+
+            </style>

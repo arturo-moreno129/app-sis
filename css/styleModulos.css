@@ -29,9 +29,11 @@ body {
 .icon {
     font-size: 25px;
 }
-.navigation{
+
+.navigation {
     overflow-y: auto;
 }
+
 .navigation {
     position: fixed;
     width: 300px;
@@ -220,54 +222,71 @@ body {
     height: 10px;
     left: 80px;
 }
-.prueba{
+
+.prueba {
     width: 200px;
     height: auto;
     background-color: red;
     z-index: 1000;
 }
- /* Estilos para el dropdown */
-                .user-dropdown {
-                    position: relative;
-                    display: inline-block;
-                }
 
-                .user-dropdown img {
-                    cursor: pointer;
-                    width: 50px;
-                    height: auto;
-                    background-color: black;
-                    border-radius: 50%;
-                }
+/* Estilos para el dropdown */
+.user-dropdown {
+    position: relative;
+    display: inline-block;
+}
 
-                .dropdown-content {
-                    display: none;
-                    position: absolute;
-                    right: 0;
-                    background-color: white;
-                    min-width: 160px;
-                    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-                    z-index: 1;
-                    border-radius: 8px;
-                    overflow: hidden;
-                }
+.user-dropdown img {
+    cursor: pointer;
+    width: 50px;
+    height: auto;
+    background-color: black;
+    border-radius: 50%;
+}
 
-                .dropdown-content a {
-                    color: black;
-                    padding: 12px 16px;
-                    text-decoration: none;
-                    display: block;
-                    border-radius: 8px;
-                }
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 8px;
+    overflow: hidden;
+}
 
-                .dropdown-content a:hover {
-                    background-color: gray;
-                    
-                }
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    border-radius: 8px;
+}
 
-                .user-dropdown:hover .dropdown-content {
-                    display: block;
-                }
+.dropdown-content a:hover {
+    background-color: var(--blue);
+    color: white;
+}
 
+.user-dropdown:hover .dropdown-content {
+    display: block;
+}
+/********* PARA DROPDONLIS*****************/
+#a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: inherit;
+}
+
+#a .icon2 {
+    font-size: 20px;
+    /* o el tamaño que quieras */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 /***************************Media queri para responsive diseño*******************************************/
