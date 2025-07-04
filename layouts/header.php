@@ -72,8 +72,8 @@ if (!isset($_SESSION['nombre'])) {
                 <div class="user-dropdown">
                     <img src="../img/avatar_h.webp" alt="">
                     <div class="dropdown-content">
-                        <a href="perfil.php">Perfil</a>
-                        <a href="cerrar_sesion.php">Cerrar sesión</a>
+                        <a href="#">Perfil</a>
+                        <a href="#" id="logout">Cerrar sesión</a>
                     </div>
                 </div>
             </div>

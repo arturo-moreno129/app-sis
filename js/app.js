@@ -110,8 +110,11 @@ document.addEventListener('DOMContentLoaded', () => {
       });
   });*/
 
+
   if (logout) {
-    logout.addEventListener('click', () => {
+    logout.addEventListener('click', (event) => {
+      event.preventDefault(); // ← ¡Esto evita que se recargue la página!
+
       fetch('../crud.php', {
         method: 'POST',
         headers: {
@@ -131,7 +134,8 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
 
-  
+
+
   const toggle = document.querySelector('.toggle');
   const navigation = document.querySelector('.navigation');
   const main = document.querySelector('.main');
