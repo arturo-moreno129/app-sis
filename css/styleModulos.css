@@ -217,9 +217,15 @@ body {
 
 .main.menu-bar {
     width: calc(100% - 100px);
+    height: 10px;
     left: 80px;
 }
-
+.prueba{
+    width: 200px;
+    height: auto;
+    background-color: red;
+    z-index: 1000;
+}
 
 
 /***************************Media queri para responsive diseño*******************************************/

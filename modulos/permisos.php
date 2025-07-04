@@ -1,15 +1,6 @@
 <?php
 include '../layouts/header.php'
 ?>
-<h1>permisos</h1>
-
-
-
-
-
-
-
-
 <!--<div class="container">
     <div class="card">
         <img src="https://i.pravatar.cc/50?img=1" alt="Avatar">

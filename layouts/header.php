@@ -21,7 +21,7 @@ if (!isset($_SESSION['nombre'])) {
 
 <body>
     <div class="container">
-        <div class="navigation">
+        <div class="navigation active">
             <ul>
                 <li>
                     <a href="#">
@@ -56,7 +56,7 @@ if (!isset($_SESSION['nombre'])) {
             </ul>
         </div>
         <!------- cabecera------->
-        <div class="main">
+        <div class="main menu-bar">
             <div class="topbar">
                 <div class="toggle">
                     <ion-icon name="menu-outline"></ion-icon>
@@ -72,5 +72,9 @@ if (!isset($_SESSION['nombre'])) {
                     <img src="../img/avatar_h.webp" alt="">
                 </div>
             </div>
+            <div class="prueba">
+                <h1>Hola</h1>
+            </div>
         </div>
+
     </div>
