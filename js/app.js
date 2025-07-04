@@ -129,16 +129,30 @@ document.addEventListener('DOMContentLoaded', () => {
         .catch(error => console.error('Error:', error));
     });
   }
-  const toggle = document.querySelector('.toggle')
-  const navigation = document.querySelector('.navigation')
-  const main = document.querySelector('.main')
+
+
+  
+  const toggle = document.querySelector('.toggle');
+  const navigation = document.querySelector('.navigation');
+  const main = document.querySelector('.main');
+
+  // Al cargar la página, revisar si el menú estaba activo
+  if (localStorage.getItem('menuOpen') === 'true') {
+    navigation.classList.add('active');
+    main.classList.add('menu-bar');
+  }
 
   if (toggle) {
     toggle.addEventListener('click', () => {
       console.log('entro');
       navigation.classList.toggle('active');
       main.classList.toggle('menu-bar');
-    })
+
+      // Guardar el estado actual
+      const isOpen = navigation.classList.contains('active');
+      localStorage.setItem('menuOpen', isOpen);
+    });
   }
+
 
 });
