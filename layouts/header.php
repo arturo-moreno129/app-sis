@@ -74,4 +74,3 @@ if (!isset($_SESSION['nombre'])) {
             </div>
         </div>
     </div>
-    <main>
