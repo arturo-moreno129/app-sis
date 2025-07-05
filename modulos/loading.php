@@ -3,8 +3,9 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Página Principal</title>
+  <title>ACR</title>
   <link rel="stylesheet" href="../css/style.css">
+  <link rel="shortcut icon" href="../img/icon.png" type="image/x-icon">
 </head>
 
 <body>
