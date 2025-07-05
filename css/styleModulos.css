@@ -250,7 +250,7 @@ body {
 }
 
 .username {
-    font-size: 20px;
+    font-size: 15px;
     color: white;
     white-space: nowrap;
     background-color: var(--blue);
@@ -313,4 +313,84 @@ body {
     justify-content: center;
 }
 
+/****************** estilo formulario************************/
+
+.form-container {
+        background: #ffffff;
+        padding: 40px;
+        border-radius: 12px;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        max-width: 90%;
+        width: 100%;
+        margin: 40px auto;
+    }
+
+    .form-container h2 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #333333;
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    .form-group label {
+        display: block;
+        margin-bottom: 6px;
+        font-weight: bold;
+        color: #555555;
+    }
+    .form-group.fecha input{
+        width: 300px; ;
+    }
+    .form-group input,
+    .form-group textarea {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #cccccc;
+        border-radius: 6px;
+        font-size: 16px;
+        transition: border-color 0.3s;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+        border-color: #4facfe;
+        outline: none;
+    }
+
+    .form-group textarea {
+        resize: vertical;
+        min-height: 100px;
+    }
+
+    .btn-submit {
+        width: 20%;
+        padding: 12px;
+        background: var(--blue);
+        border: none;
+        border-radius: 6px;
+        color: black;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background 0.3s;
+    }
+    .btn-submit.cancel{
+        background-color: red
+    }
+    
+
+    .btn-submit:hover {
+        background: #00c3ff;
+    }
+    .btn-submit.cancel:hover {
+        background:rgb(255, 17, 0);
+    }
+
+    @media (max-width: 500px) {
+        .form-container {
+            padding: 30px 20px;
+        }
+    }
 /***************************Media queri para responsive diseño*******************************************/

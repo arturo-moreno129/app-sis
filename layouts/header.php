@@ -78,9 +78,4 @@ if (!isset($_SESSION['nombre'])) {
                         </a>
                     </div>
                 </div>
-
             </div>
-
-            <style>
-
-            </style>

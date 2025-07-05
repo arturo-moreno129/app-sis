@@ -1,9 +1,36 @@
 <?php
 include '../layouts/header.php'
 ?>
-<div class="prueba">
-    <h1>Hola</h1>
+<!-- AQUÍ VA EL FORMULARIO -->
+<div class="form-container">
+    <h2>Permiso</h2>
+    <form action="#" method="post">
+        <div class="form-group">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required />
+        </div>
+        <div class="form-group">
+            <label for="email">Correo electrónico</label>
+            <input type="email" id="email" name="email" placeholder="correo@ejemplo.com" required />
+        </div>
+        <div class="form-group">
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje" name="mensaje" placeholder="Escribe tu mensaje..." required></textarea>
+        </div>
+        <div class="form-group fecha">
+            <input type="date" name="" id="">
+            <input type="time" name="" id="">
+        </div>
+        <center>
+            <button type="submit" class="btn-submit">Enviar</button>
+            <button type="submit" class="btn-submit cancel">Cancelar</button>
+        </center>
+    </form>
 </div>
+
+</div>
+</div>
+
 <!--<div class="container">
     <div class="card">
         <img src="https://i.pravatar.cc/50?img=1" alt="Avatar">
